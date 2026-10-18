@@ -1,0 +1,28 @@
+# North 40 cruise: four 0.2-acre sample plots, plus one tree off-plot.
+rule doyle
+price 450              # dollars per thousand board feet
+min_dbh 10             # smaller trees are counted but not valued
+grades 1=1.00 2=0.75 3=0.50
+
+plot P1 0.2
+plot P2 0.2
+plot P3 0.2
+plot P4 0.2
+
+# SPECIES DBH_IN LENGTH_FT [plot=NAME] [grade=N]
+DF 18 32 plot=P1 grade=1
+DF 14 32 plot=P1 grade=2
+WH 12 16 plot=P1 grade=1
+RC 8 16 plot=P1                 # below min_dbh
+DF 22 32 plot=P2 grade=1
+DF 20 32 plot=P2 grade=1
+DF 16 32 plot=P2 grade=3
+WH 14 32 plot=P2 grade=2
+DF 19 32 plot=P3 grade=1
+DF 17 32 plot=P3 grade=2
+RC 12 16 plot=P3 grade=1
+WH 11 16 plot=P3 grade=1
+DF 15 32 plot=P4 grade=1
+WH 13 32 plot=P4 grade=1
+RC 20 16 plot=P4 grade=2
+DF 24.5 16                      # off-plot, no plot= given

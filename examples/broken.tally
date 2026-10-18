@@ -1,0 +1,12 @@
+# Deliberately broken cruise, used to show line-numbered errors.
+rule timber
+price 450
+plot P1 0.2
+plot P1 0.5
+DF 18 32 plot=P1 grade=1
+DF 0 32
+WH twelve 16
+XX-9 14 16 plot=P9
+DF 16 32 grade=4
+DF 15 32 colour=red
+DF 15 32 plot=P1 plot=P1
